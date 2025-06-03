@@ -1,15 +1,15 @@
 // app/page.tsx
-"use client";
 
-import { useState } from "react";
 import { handleForm } from "./actions";
 
 export default function Home() {
-  const [hello, sethello] = useState("second");
-  console.log(hello);
+  // Simple server-side JS code for testing:
+  const serverMessage = `Server time: ${new Date().toLocaleString()}`;
+
   return (
     <main>
-      <h1 onClick={() => sethello("third")}>Contact Form {hello}</h1>
+      <h1>Contact Form</h1>
+      <p>{serverMessage}</p>
       <form action={handleForm} method="POST">
         <label>
           Name:
