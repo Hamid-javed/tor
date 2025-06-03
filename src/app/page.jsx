@@ -1,4 +1,6 @@
 // app/page.tsx
+"use client";
+
 import { useState } from "react";
 import { handleForm } from "./actions";
 
