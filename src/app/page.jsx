@@ -2,11 +2,12 @@
 
 import { handleForm } from "./actions";
 
+export const revalidate = 0; // <- add this to disable static caching
+
 export default function Home() {
   // Server-side JS logic:
   const serverMessage = `Server time: ${new Date().toLocaleString()}`;
 
-  // Random quotes array:
   const quotes = [
     "Keep it simple.",
     "Write clean code.",
@@ -14,10 +15,8 @@ export default function Home() {
     "No client JS needed here.",
   ];
 
-  // Pick a random quote:
   const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
-  // Some server-side calculation:
   const a = 5;
   const b = 7;
   const sum = a + b;
