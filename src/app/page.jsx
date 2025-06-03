@@ -1,10 +1,13 @@
 // app/page.tsx
+import { useState } from "react";
 import { handleForm } from "./actions";
 
 export default function Home() {
+  const [hello, sethello] = useState("second");
+
   return (
     <main>
-      <h1>Contact Form</h1>
+      <h1>Contact Form {hello}</h1>
       <form action={handleForm} method="POST">
         <label>
           Name:
