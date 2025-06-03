@@ -6,10 +6,10 @@ import { handleForm } from "./actions";
 
 export default function Home() {
   const [hello, sethello] = useState("second");
-
+  console.log(hello);
   return (
-    <main onClick={console.log("asdf")}>
-      <h1>Contact Form {hello}</h1>
+    <main>
+      <h1 onClick={() => sethello("third")}>Contact Form {hello}</h1>
       <form action={handleForm} method="POST">
         <label>
           Name:
